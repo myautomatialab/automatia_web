@@ -19,10 +19,30 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
+const title = "Automatialab — Automatización con IA para negocios";
+const description =
+  "Diseñamos e implementamos automatizaciones con IA e integraciones (n8n y más) que eliminan trabajo manual y hacen crecer tu operación.";
+
 export const metadata: Metadata = {
-  title: "Automatialab — Automatización con IA para negocios",
-  description:
-    "Diseñamos e implementamos automatizaciones con IA e integraciones (n8n y más) que eliminan trabajo manual y hacen crecer tu operación.",
+  metadataBase: new URL("https://automatialab.com"),
+  title,
+  description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "https://automatialab.com",
+    siteName: "Automatialab",
+    locale: "es_MX",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
